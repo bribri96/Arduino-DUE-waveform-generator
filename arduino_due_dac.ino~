@@ -68,12 +68,12 @@ void loop() {
       Serial.read();
   }
   
-  analogWrite(DAC1, buf[idx]); //Mando in uscita il valore corrente
+  analogWrite(DAC1, buf[idx]);
 
-  idx++; //Incremento l'indice del buffer
+  idx++;
   
-  if(idx == SAMPLE) //Se l'indice del buffer raggiunge il suo valore massimo lo resetto
+  if(idx == SAMPLE) 
     idx = 0;
 
-  delayMicroseconds(delayusec); //Applico il ritardo per ottenere la frequenza impostata
+  delayMicroseconds(delayusec);  
 }
